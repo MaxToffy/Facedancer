@@ -157,8 +157,8 @@ class RawGadgetBackend(FacedancerApp, FacedancerBackend):
             log.info(f"overriding device speed with %r", device_speed)
 
         self.device.init_and_run(
-            udc_driver=os.environ.get("RG_UDC_DRIVER", "dummy_udc").lower(),
-            udc_device=os.environ.get("RG_UDC_DEVICE", "dummy_udc.0").lower(),
+            udc_driver=os.environ.get("RG_UDC_DRIVER", "20980000.usb").lower(),
+            udc_device=os.environ.get("RG_UDC_DEVICE", "20980000.usb").lower(),
             speed=device_speed,
         )
 
